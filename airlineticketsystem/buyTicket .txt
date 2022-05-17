@@ -1,0 +1,74 @@
+buyTicket metodu kredi karti bilgilerini maskeler,
+ucuş bilgilerine göre bilet fiyatını günceller,
+random bilet numarası üretir.
+
+
+http://localhost:8090/ticket/buyTicket
+
+{
+    "flight":{
+        "id":12
+},
+    "passenger": {
+        "id":13
+    },
+    "airPort":{
+        "id":7
+    },
+    "creditCard":"1234-1234-12//34-123-4"
+}
+
+sonuc:
+{
+    "id": 13,
+    "flight": {
+        "id": 12,
+        "route": {
+            "id": 10,
+            "departure": {
+                "id": 9,
+                "city": "İzmir",
+                "name": "Adnan Menderes"
+            },
+            "arrival": {
+                "id": 8,
+                "city": "İstanbul",
+                "name": "Atatürk"
+            }
+        },
+        "departureTime": "2022-05-16T10:00:00.000+00:00",
+        "departureDate": "2022-05-16T10:00:00.000+00:00",
+        "arrivedTime": "2022-05-16T12:00:00.000+00:00",
+        "arrivedDate": "2022-05-16T12:00:00.000+00:00",
+        "airPlane": {
+            "id": 11,
+            "model": "Airbus A330",
+            "capacity": null
+        },
+        "airLine": {
+            "id": 4,
+            "name": "THY",
+            "address": "adress",
+            "number": 123456789,
+            "flightDtoList": null
+        },
+        "price": 100.00,
+        "oldCapacity": 20,
+        "newCapacity": 30
+    },
+    "passenger": {
+        "id": 13,
+        "name": "Test",
+        "surname": "test",
+        "email": "test@test",
+        "number": 123456,
+        "cardInfos": []
+    },
+    "airPort": {
+        "id": 7,
+        "city": "İstanbul",
+        "name": "Sabiha Gökçen"
+    },
+    "ticketNo": "1652818917209Test",
+    "creditCard": "123412******1234"
+}
